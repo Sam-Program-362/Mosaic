@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base window theme for the Compose UI. Compose provides the real theming,
+         so this only needs to be a no-action-bar Material theme. -->
+    <style name="Theme.Mosaic" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

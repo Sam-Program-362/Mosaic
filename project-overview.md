@@ -112,7 +112,7 @@ The reference for layout and interaction is Reddit's Android app, including its 
 
 ## Implementation Defaults and Unresolved Decisions
 
-- Recommended implementation baseline: Kotlin, Jetpack Compose, AndroidX libraries, Room for local metadata, DataStore for preferences, Android's Storage Access Framework for folder grants, and Media3 for MP4 playback. This is a recommendation, not a user-confirmed stack decision.
-- The app's final public name, package/application ID, minimum Android version, and release target SDK are not set.
+- Confirmed implementation baseline (user-confirmed 2026-10-11): Kotlin, Jetpack Compose with Material 3, AndroidX libraries, Room for local metadata, DataStore for preferences, Android's Storage Access Framework for folder grants, and Media3 for MP4 playback.
+- Confirmed app identity (user-confirmed 2026-10-11): public name "Mosaic", namespace/application ID `com.samprogram.mosaic`, `minSdk` 26, and `compileSdk`/`targetSdk` 37.
 - Supported still-image formats should follow Android-recognized image MIME types available from the selected document provider; GIF and MP4 remain explicit requirements.
 - If a selected folder contains duplicate file names across different paths, use a collision-safe internal identity based on the content URI/path rather than the visible title.
