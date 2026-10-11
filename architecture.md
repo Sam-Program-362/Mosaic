@@ -40,7 +40,7 @@ Recommended package boundaries under `app/src/main/java/<package>/`:
 - `ui/components/` — shared UI primitives only; feature-specific state and business rules stay within feature/data layers.
 - `*/test/` or matching test source sets — tests near the module/package they verify.
 
-The project is now scaffolded as a single `:app` Gradle module at the repository root containing only the application entry point. The remaining package boundaries above are the agreed organization for the feature work that follows and have not all been created yet.
+The project is a single `:app` Gradle module at the repository root. The folder-library slice of these boundaries is implemented: `core/model/` (domain models), `data/local/` (Room database, entities, DAOs, mappers), `data/source/` (Storage Access Framework access, grant handling, media-type detection, direct-child enumeration), `data/repository/` (folder library, refresh, and reconciliation), and `feature/folders/` (library and per-folder media screens). `app/` hosts `MosaicApplication` (manual DI container) and `MainActivity`. The feed, communities, viewer, saved, settings, and ui/components packages do not exist yet; create each one when its feature is implemented.
 
 ## Storage Model
 

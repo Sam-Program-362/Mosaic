@@ -3,18 +3,17 @@ package com.samprogram.mosaic
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
+import com.samprogram.mosaic.feature.folders.FolderLibraryRoute
 import com.samprogram.mosaic.ui.theme.MosaicTheme
 
+/**
+ * Hosts the app. It stays deliberately thin: all folder and media work lives
+ * behind the repository and the feature ViewModel.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,30 +23,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    MosaicHomeScreen()
+                    FolderLibraryRoute()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun MosaicHomeScreen(modifier: Modifier = Modifier) {
-    Box(
-        modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = stringResource(R.string.app_name),
-            style = MaterialTheme.typography.headlineMedium,
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun MosaicHomeScreenPreview() {
-    MosaicTheme {
-        MosaicHomeScreen()
     }
 }

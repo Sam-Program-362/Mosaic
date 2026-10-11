@@ -1,6 +1,6 @@
 # Local Media Feed — Project Overview
 
-> **Working description, not a finalized app name.** The product is a private, offline Android media browser with Reddit-style feeds and communities. It is not a networked social network.
+> The confirmed app name is **Mosaic** (see "Implementation Defaults and Unresolved Decisions"). The product is a private, offline Android media browser with Reddit-style feeds and communities. It is not a networked social network.
 
 ## Overview
 

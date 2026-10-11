@@ -1,4 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mosaic</string>
+
+    <!-- Folder library -->
+    <string name="library_title">Mosaic</string>
+    <string name="action_add_folder">Add folder</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_back">Back</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="library_empty_title">No folders yet</string>
+    <string name="library_empty_message">Add a folder to build your library. Mosaic only reads the folders you choose, and never changes your files.</string>
+    <string name="library_loading">Loading your folders…</string>
+
+    <string name="folder_status_available">Available</string>
+    <string name="folder_status_unavailable">Unavailable</string>
+
+    <string name="scan_failure_access_not_granted">Access to this folder is no longer granted. Select the folder again to restore it.</string>
+    <string name="scan_failure_access_denied">The folder provider denied access to this folder.</string>
+    <string name="scan_failure_missing_document">This folder is no longer available at the provider.</string>
+    <string name="scan_failure_provider_error">The folder provider could not be read.</string>
+    <string name="scan_failure_io_error">This folder could not be read.</string>
+
+    <string name="remove_folder_title">Remove folder?</string>
+    <string name="remove_folder_message">“%1$s” and its indexed media will be removed from Mosaic. Your files are not changed.</string>
+
+    <!-- Folder media list -->
+    <string name="folder_media_empty_title">No supported media</string>
+    <string name="folder_media_empty_message">This folder has no photos, GIFs, or MP4 videos directly inside it. Media in nested folders is ignored.</string>
+    <string name="folder_media_loading">Loading media…</string>
+    <string name="folder_media_removed">This folder is no longer in your library.</string>
+
+    <string name="media_kind_image">Photo</string>
+    <string name="media_kind_gif">GIF</string>
+    <string name="media_kind_video">MP4 video</string>
+
+    <string name="message_access_denied">Read access was not granted, so the folder was not added.</string>
+    <string name="message_invalid_selection">That folder could not be opened.</string>
+
+    <plurals name="folder_media_count">
+        <item quantity="one">%1$d media file</item>
+        <item quantity="other">%1$d media files</item>
+    </plurals>
+
+    <plurals name="message_added">
+        <item quantity="one">Added %1$d media file.</item>
+        <item quantity="other">Added %1$d media files.</item>
+    </plurals>
+
+    <plurals name="message_already_registered">
+        <item quantity="one">Folder already added. Re-scanned %1$d media file.</item>
+        <item quantity="other">Folder already added. Re-scanned %1$d media files.</item>
+    </plurals>
+
+    <plurals name="message_unavailable_folders">
+        <item quantity="one">%1$d folder is unavailable. Select it again to restore access.</item>
+        <item quantity="other">%1$d folders are unavailable. Select them again to restore access.</item>
+    </plurals>
 </resources>

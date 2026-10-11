@@ -2,7 +2,7 @@
 
 ## Stack
 
-The project is Android-native. The following is the **recommended baseline for implementation**, not a stack choice explicitly confirmed by the user. If implementation starts without further direction, use this baseline and record any change in this file.
+The project is Android-native. The stack below was **confirmed by the user on 2026-10-11** for the scaffold, together with the app identity `com.samprogram.mosaic`, `minSdk` 26, and `compileSdk`/`targetSdk` 37. Record any change in this file.
 
 | Layer | Technology | Role |
 | --- | --- | --- |
@@ -40,7 +40,7 @@ Recommended package boundaries under `app/src/main/java/<package>/`:
 - `ui/components/` — shared UI primitives only; feature-specific state and business rules stay within feature/data layers.
 - `*/test/` or matching test source sets — tests near the module/package they verify.
 
-Use the existing Android project structure if one already exists. The package boundaries above are a proposed organization, not a claim that a repository has already been scaffolded.
+The project is a single `:app` Gradle module at the repository root. The folder-library slice of these boundaries is implemented: `core/model/` (domain models), `data/local/` (Room database, entities, DAOs, mappers), `data/source/` (Storage Access Framework access, grant handling, media-type detection, direct-child enumeration), `data/repository/` (folder library, refresh, and reconciliation), and `feature/folders/` (library and per-folder media screens). `app/` hosts `MosaicApplication` (manual DI container) and `MainActivity`. The feed, communities, viewer, saved, settings, and ui/components packages do not exist yet; create each one when its feature is implemented.
 
 ## Storage Model
 

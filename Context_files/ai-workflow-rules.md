@@ -4,7 +4,7 @@
 
 Build this project incrementally using a spec-driven workflow. The six context files define the product, architecture, conventions, UI behavior, and current state. Read the relevant sections before making a change and implement the specified behavior rather than inventing a different product.
 
-The user is the final decision-maker. Respect explicit requirements, including the Reddit-like Android interface, local-only storage scope, offline operation, and the rule that this project is a planning/context package until implementation is explicitly requested. Do not silently turn a recommended implementation default into a user-confirmed decision.
+The user is the final decision-maker. Respect explicit requirements, including the Reddit-like Android interface, local-only storage scope, offline operation, and the scope of the task in progress; implementation proceeds one feature unit at a time and only when the user requests it. Do not silently turn a recommended implementation default into a user-confirmed decision.
 
 ## Scoping Rules
 

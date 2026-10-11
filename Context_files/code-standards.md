@@ -72,7 +72,7 @@
 - Test that Saved copies remain readable after source deletion and that repeating Save produces separate files.
 - Add UI tests for the empty state, community drawer, sort switching, post-to-viewer navigation, vertical paging, mute/unmute controls, Save copy feedback, and light/dark theme switching where practical.
 - Use test doubles for document providers/repositories when testing domain logic. Do not rely exclusively on manual testing with one real device folder.
-- Before closing a task, run the narrow relevant tests, then the available full checks. Recommended baseline commands once the Android project exists: `./gradlew testDebugUnitTest`, `./gradlew lint`, and `./gradlew assembleDebug`.
+- Before closing a task, run the narrow relevant tests, then the available full checks. Baseline commands: `./gradlew testDebugUnitTest`, `./gradlew lint`, and `./gradlew assembleDebug`.
 - Record any checks that could not run and why. Never claim a build or test passed unless its output confirms success.
 
 ## Styling

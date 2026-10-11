@@ -4,9 +4,11 @@ An offline Android media browser that turns folders you choose into a Reddit-sty
 feed. All content and settings stay on the device: no account, no server, and no
 network access at runtime.
 
-This repository currently contains the **project scaffold only**. Product features
-(local media scanning, feeds, communities, immersive viewer, Saved) are not
-implemented yet.
+This repository implements the **local folder library**: select folders with
+Android's native picker, index supported media from their direct children with
+persisted metadata, and refresh safely (unavailable folders keep their last-known
+state). The Reddit-style feed, communities, immersive viewer, and Saved copies
+are not implemented yet.
 
 ## Documentation
 
@@ -33,7 +35,7 @@ untracked `local.properties` file containing `sdk.dir=/path/to/android-sdk`.
 ```bash
 ./gradlew assembleDebug      # debug APK -> app/build/outputs/apk/debug/app-debug.apk
 ./gradlew lintDebug          # Android lint
-./gradlew testDebugUnitTest  # unit tests (none exist yet)
+./gradlew testDebugUnitTest  # unit tests
 ```
 
 ## Configuration
@@ -48,6 +50,6 @@ untracked `local.properties` file containing `sdk.dir=/path/to/android-sdk`.
 
 ## Permissions
 
-The app declares no permissions. Local media access will use Android's Storage
-Access Framework when that feature is implemented, so the app never requests broad
-storage access.
+The app declares no permissions. Folder access flows through Android's Storage
+Access Framework with user-granted, persisted URI permissions, so the app never
+requests broad storage access and never requests the internet permission.
